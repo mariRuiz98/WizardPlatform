@@ -1,9 +1,13 @@
 using UnityEngine;
 
+using TMPro;
+using UnityEngine.SceneManagement;
+
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float inputH;
+     private bool isInPipeArea = false;
 
     [Header("Jump System")]
     [SerializeField] private float speedMovement;
@@ -17,6 +21,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRadius;
     [SerializeField] private LayerMask attackableLayer;
+    [SerializeField] private TextMeshProUGUI lifeText;
 
 
     private Animator anim;
@@ -31,11 +36,19 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        lifeText.text = GetComponent<LifeSystem>().GetLife().ToString();
+        
+        // Si el jugador está encima de la tubería y presiona la tecla "E"
+        if (isInPipeArea && Input.GetKeyDown(KeyCode.E))
+        {
+            SceneManager.LoadScene("EndGame");
+        }
         Movement();
     
         Jump();
 
         SendAttack();
+        
     }
 
 
@@ -92,6 +105,7 @@ public class Player : MonoBehaviour
         foreach (Collider2D collider in collidersTriggered)
         {
             LifeSystem lifeSystem = collider.GetComponent<LifeSystem>();
+            // Efecto daño
             lifeSystem.RecieveDamage(damageAttack);
         }
     }
@@ -99,6 +113,23 @@ public class Player : MonoBehaviour
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Finish"))  // Si el objeto tiene el tag "Finish"
+        {
+            isInPipeArea = true;  // El jugador está encima de la tubería
+        }
+    }
+
+    // Este método se llama cuando el jugador sale del contacto con el objeto
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Finish"))
+        {
+            isInPipeArea = false;  // El jugador ya no está encima de la tubería
+        }
     }
 
 }
