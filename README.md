@@ -59,3 +59,7 @@ El HUD del juego incluye:
 ## 6. Música y Sonido
 - Se incorpora música de fondo en todos los niveles para mejorar la inmersión.
 - Se incluyen efectos sonoros para interacciones con botones.
+
+## Links
+- **Repositorio GitHub**: [https://github.com/mariRuiz98/WizardPlatform.git](https://github.com/mariRuiz98/WizardPlatform.git)
+- **Juego itch.io**: [https://mburriez.itch.io/outer-realm](https://mburriez.itch.io/outer-realm)
