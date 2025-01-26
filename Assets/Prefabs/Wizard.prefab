@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireBall: {fileID: 4714090988667270635, guid: f6f888bdb9406f74591dc4d1a41a988b, type: 3}
   firePoint: {fileID: 6411339727185236612}
-  timeAttack: 2
+  timeAttack: 3
   damageAttack: 30
   player: {fileID: 2735783714151513297, guid: 1340beca8a5d7e64e90fa3ca6282855d, type: 3}
 --- !u!114 &145088705040094049
@@ -69,6 +69,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 80
+  maxLife: 0
+  damageContainerPrefab: {fileID: 2750201482012265451, guid: 72612dd2f215deb488640272a5f5efeb, type: 3}
 --- !u!212 &6822536415227385571
 SpriteRenderer:
   m_ObjectHideFlags: 0

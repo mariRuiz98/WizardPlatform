@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 7591877726318957757}
   m_Layer: 6
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be69954589b51104181ba0cb744ace0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 60
+  life: 20
+  maxLife: 0
+  damageContainerPrefab: {fileID: 2750201482012265451, guid: 72612dd2f215deb488640272a5f5efeb, type: 3}
 --- !u!114 &6841648207718154520
 MonoBehaviour:
   m_ObjectHideFlags: 0

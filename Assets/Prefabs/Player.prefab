@@ -84,6 +84,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 100
+  maxLife: 100
+  damageContainerPrefab: {fileID: 2750201482012265451, guid: 72612dd2f215deb488640272a5f5efeb, type: 3}
 --- !u!114 &384507445131183412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +111,7 @@ MonoBehaviour:
   attackableLayer:
     serializedVersion: 2
     m_Bits: 64
+  lifeText: {fileID: 0}
 --- !u!212 &6159842834743200161
 SpriteRenderer:
   m_ObjectHideFlags: 0

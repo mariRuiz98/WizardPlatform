@@ -1927,7 +1927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1744746651}
   clickSound: {fileID: 8300000, guid: cd77e1f6f8e13f7419e9ed1bd0588bbe, type: 3}
-  sceneToLoad: Platforms
+  sceneToLoad: MainMenu
   transitionAnimator: {fileID: 6348493080742341908, guid: 4975b17930c5c2946b78d805985be28c, type: 3}
   transitionTime: 1
 --- !u!114 &1744746653

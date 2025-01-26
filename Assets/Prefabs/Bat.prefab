@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5346079301678001630}
   m_Layer: 6
   m_Name: Bat
-  m_TagString: Untagged
+  m_TagString: Bat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,6 +51,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 40
+  maxLife: 0
+  damageContainerPrefab: {fileID: 2750201482012265451, guid: 72612dd2f215deb488640272a5f5efeb, type: 3}
 --- !u!114 &5186283236194466900
 MonoBehaviour:
   m_ObjectHideFlags: 0

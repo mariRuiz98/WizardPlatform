@@ -6,6 +6,10 @@ TagManager:
   tags:
   - PlayerHitBox
   - PlayerDetection
+  - Slime
+  - Bat
+  - Wizard
+  - MedPack
   layers:
   - Default
   - TransparentFX

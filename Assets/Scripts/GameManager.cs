@@ -10,10 +10,10 @@ public class GameManager : MonoBehaviour
     // pauseMenu
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private TextMeshProUGUI scoreText;
     private bool isPaused = false;
     private float timer;
     private bool isGameOver = false;
-
 
     public int score { get; private set; }
 
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
             timer -= Time.deltaTime;
             timeText.text = timer.ToString("F0");
             // timerText.text = "Time: " + timer.ToString();
-            // scoreText.text = "Score: " + score.ToString();
+            scoreText.text = "Score: " + score.ToString();
             
             if (timer <= 0)
             {
@@ -52,6 +52,11 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void AddScore(int points)
+    {
+        score += points;
     }
 
     public void PauseGame()
@@ -80,7 +85,7 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         Debug.Log("¡Tiempo agotado! Fin del juego.");
-        SceneManager.LoadScene("EndGame");
+        SceneManager.LoadScene("GameOver");
         //Time.timeScale = 0;  // Esto pausa el juego
     }
     
